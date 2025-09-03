@@ -8,18 +8,18 @@
   --background-color: #ffffff;
   --default-color: #444444;
   --heading-color: #283d50;
-  --accent-color: #007bff;
+  --accent-color: #00b3ff;
   --surface-color: #ffffff;
   --contrast-color: #ffffff;
 }
 
 :root {
   --nav-color: #024286;
-  --nav-hover-color: #007bff;
+  --nav-hover-color: #00b3ff;
   --nav-mobile-background-color: #ffffff;
   --nav-dropdown-background-color: #ffffff;
   --nav-dropdown-color: #444444;
-  --nav-dropdown-hover-color: #007bff;
+  --nav-dropdown-hover-color: #00b3ff;
 }
 
 .light-background {
@@ -207,8 +207,8 @@ h6 {
 .header {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 15px 0;
   transition: all 0.5s;
+  padding: 10px 0;
   z-index: 997;
 }
 
@@ -217,7 +217,7 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 60px;
+  max-height: 70px;
   margin-right: 8px;
 }
 
@@ -269,9 +269,10 @@ h6 {
 
   .navmenu a i,
   .navmenu a:focus i {
-    font-size: 12px;
+    font-size: 16px;
     line-height: 0;
     margin-left: 5px;
+    margin-right: 5px;
     transition: 0.3s;
   }
 
@@ -474,7 +475,7 @@ h6 {
 --------------------------------------------------------------*/
 .footer {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: var(--accent-color);
   font-size: 14px;
   position: relative;
 }
@@ -489,7 +490,7 @@ h6 {
 }
 
 .footer .footer-about .logo img {
-  max-height: 40px;
+  max-height: 80px;
   margin-right: 6px;
 }
 
@@ -716,7 +717,7 @@ h6 {
 --------------------------------------------------------------*/
 .page-title {
   color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: var(--accent-color);
   padding: 25px 0;
   position: relative;
 }
@@ -800,7 +801,7 @@ section,
   padding: 60px 0;
   display: flex;
   align-items: center;
-  background: url(../img/hero-bg.png) center bottom no-repeat;
+  background: url(../img/hero-bg-2.png) center bottom no-repeat;
   background-size: cover;
 }
 
@@ -825,15 +826,15 @@ section,
 }
 
 .hero .btn-get-started {
-  color: var(--contrast-color);
-  background: var(--accent-color);
+  color: var(--accent-color);
+  background: #fff;
   font-family: var(--heading-font);
-  font-weight: 400;
+  font-weight: 600;
   font-size: 15px;
   letter-spacing: 1px;
   display: inline-block;
-  padding: 10px 28px 12px 28px;
-  border-radius: 50px;
+  padding: 10px 28px 10px 28px;
+  border-radius: 5px;
   transition: 0.5s;
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
 }
@@ -1023,6 +1024,7 @@ section,
   transition: all ease-in-out 0.3s;
   height: 100%;
   position: relative;
+  border-radius: 10px;
 }
 
 .why-us .card-item span {
@@ -1059,6 +1061,10 @@ section,
 .why-us .card-item:hover span,
 .why-us .card-item:hover h4 a,
 .why-us .card-item:hover p {
+  color: var(--contrast-color);
+}
+
+.why-us .card-item:hover h4 {
   color: var(--contrast-color);
 }
 
@@ -1134,9 +1140,9 @@ section,
   color: var(--contrast-color);
   background: var(--accent-color);
   border: 0;
-  padding: 10px 30px;
+  padding: 10px 28px;
   transition: 0.4s;
-  border-radius: 50px;
+  border-radius: 5px;
 }
 
 .contact .php-email-form button[type=submit]:hover {
@@ -1281,7 +1287,7 @@ section,
 
 .starter-section h4 {
   font-size: 1.5rem;
-  color: #1d3557;
+  color: var(--accent-color);
 }
 
 .service-card {
@@ -1307,14 +1313,16 @@ section,
 # Schadule Model
 --------------------------------------------------------------*/
 
-.header .btn-getstarted, .header .btn-getstarted:focus {
-    color: var(--contrast-color);
-    background: #007bff;
-    font-size: 14px;
-    padding: 8px 26px;
-    margin: 0;
-    border-radius: 4px;
-    transition: 0.3s;
+.header .btn-getstarted,
+.header .btn-getstarted:focus {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  font-size: 14px;
+  padding: 8px 20px;
+  margin: 0;
+  border-radius: 4px;
+  transition: 0.3s;
+  cursor: pointer;
 }
 
 .modal {
@@ -1340,7 +1348,7 @@ section,
 
 .modal-content h2 {
   margin-bottom: 15px;
-  color: #024286;
+  color: var(--accent-color);
   font-weight: 700;
 }
 
@@ -1364,7 +1372,7 @@ section,
   margin-top: 15px;
   width: 100%;
   padding: 10px;
-  background: #007bff;
+  background: var(--accent-color);
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -1379,4 +1387,43 @@ section,
   text-align: right;
   font-size: 22px;
   cursor: pointer;
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.for-mobile-only {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .navmenu a,
+  .navmenu a:focus {
+    justify-content: start;
+  }
+
+  .tele-for-phone {
+    display: none;
+  }
+
+  .header .btn-getstarted,
+  .header .btn-getstarted:focus {
+    padding: 8px;
+  }
+
+  .for-mobile-only {
+    display: inline;
+  }
+
+  .for-desktop-only {
+    display: none !important;
+  }
+
+  .for-mobile-only a {
+    color: var(--contrast-color);
+  }
+
 }
