@@ -850,6 +850,13 @@ section,
 }
 
 @media (max-width: 640px) {
+
+  .hero .animated {
+    max-height: 350px;
+    display: flex;
+    justify-content: center;
+  }
+
   .hero h1 {
     font-size: 28px;
     line-height: 36px;
@@ -1400,6 +1407,7 @@ section,
 }
 
 @media (max-width: 600px) {
+
   .navmenu a,
   .navmenu a:focus {
     justify-content: start;
